@@ -25,3 +25,17 @@ bool operator!=(const Size& S1, const Size& S2)
 		return true;
 	return false;
 }
+
+bool operator>(const Size& S1, const Size& S2)
+{
+	if (S1.m_height >= S2.m_height && S1.m_width >= S2.m_width)
+		return true;
+	return false;
+}
+
+bool operator<(const Size& S1, const Size& S2)
+{
+	if (S1.m_height < S2.m_height && S1.m_width < S2.m_width)
+		return true;
+	return false;
+}

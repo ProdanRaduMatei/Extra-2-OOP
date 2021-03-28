@@ -13,6 +13,8 @@ public:
 
 	friend bool operator==(const Size& S1, const Size& S2);
 	friend bool operator!=(const Size& S1, const Size& S2);
+	friend bool operator>(const Size& S1, const Size& S2);
+	friend bool operator<(const Size& S1, const Size& S2);
 
 private:
 	unsigned int m_width;

@@ -11,6 +11,7 @@ public:
 	Image(unsigned int w, unsigned int h);//constructor that initializes
 	Image(const Image& other);//copy constructor
 	~Image();//destructor
+	void release();
 
 	bool load(std::string imagePath);
 	bool save(std::string imagePath);
@@ -35,8 +36,6 @@ public:
 	unsigned char& at(Point pt);
 
 	unsigned char* row(int y);
-
-	void release();//call in the destructor?
 
 	friend std::ostream& operator<<(std::ostream& os, const Image& dt);
 
