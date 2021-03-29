@@ -8,9 +8,9 @@ Image::Image()
 {
 	this->m_width = 0;
 	this->m_height = 0;
-	this->m_data = new unsigned char*[10];
+	this->m_data = new unsigned int*[10];
 	for (int i = 0; i < 10; i++)
-		this->m_data[i] = new unsigned char[0];
+		this->m_data[i] = new unsigned int[0];
 	
 }
 
@@ -18,9 +18,9 @@ Image::Image(unsigned int w, unsigned int h)
 {
 	this->m_width = w;
 	this->m_height = h;
-	this->m_data = new unsigned char*[h];
+	this->m_data = new unsigned int*[h];
 	for (int i = 0; i < h; i++)
-		this->m_data[i] = new unsigned char[w];
+		this->m_data[i] = new unsigned int[w];
 }
 
 Image::Image(const Image& other)
@@ -33,9 +33,9 @@ Image::Image(const Image& other)
 
 	this->release();
 	delete[] this->m_data;
-	this->m_data = new unsigned char* [this->m_height];
+	this->m_data = new unsigned int* [this->m_height];
 	for (int i = 0; i < this->m_height; i++)
-		this->m_data[i] = new unsigned char[this->m_width];
+		this->m_data[i] = new unsigned int[this->m_width];
 
 	for (int i = 0; i < this->m_height ; i++)
 		for (int j = 0; j < this->m_width; j++)
@@ -57,9 +57,9 @@ Image& Image::operator=(const Image& other)
 
 	this->release();
 	delete[] this->m_data;
-	this->m_data = new unsigned char* [this->m_height];
+	this->m_data = new unsigned int* [this->m_height];
 	for (int i = 0; i < this->m_height; i++)
-		this->m_data[i] = new unsigned char[this->m_width];
+		this->m_data[i] = new unsigned int[this->m_width];
 
 	for (int i = 0; i < this->m_height; i++)
 		for (int j = 0; j < this->m_width; j++)
@@ -146,17 +146,17 @@ unsigned int Image::height() const
 	return this->m_height;
 }
 
-unsigned char& Image::at(unsigned int x, unsigned int y)
+unsigned int& Image::at(unsigned int x, unsigned int y)
 {
 	return this->m_data[x][y];
 }
 
-unsigned char& Image::at(Point pt)
+unsigned int& Image::at(Point pt)
 {
 	return this->m_data[pt.getX()][pt.getY()];
 }
 
-unsigned char* Image::row(int y)
+unsigned int* Image::row(int y)
 {
 	return m_data[y];
 }

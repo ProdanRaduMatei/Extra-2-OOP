@@ -32,17 +32,17 @@ public:
 	unsigned int width() const;
 	unsigned int height() const;
 
-	unsigned char& at(unsigned int x, unsigned int y);
-	unsigned char& at(Point pt);
+	unsigned int& at(unsigned int x, unsigned int y);
+	unsigned int& at(Point pt);
 
-	unsigned char* row(int y);
+	unsigned int* row(int y);
 
 	friend std::ostream& operator<<(std::ostream& os, const Image& dt);
 
 	static Image zeros(unsigned int width, unsigned int height);
 	static Image ones(unsigned int width, unsigned int height);
 private:
-	unsigned char** m_data;
+	unsigned int** m_data;
 	unsigned int m_width;
 	unsigned int m_height;
 };

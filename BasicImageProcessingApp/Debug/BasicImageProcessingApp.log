@@ -14,6 +14,6 @@ C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Ima
 C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(107,21): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(172,20): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(173,21): warning C4018: '<': signed/unsigned mismatch
-  Size.cpp
+  Main.cpp
   Generating Code...
   BasicImageProcessingApp.vcxproj -> C:\Users\Andrei\source\repos\BasicImageProcessingApp\Debug\BasicImageProcessingApp.exe
