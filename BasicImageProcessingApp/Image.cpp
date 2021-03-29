@@ -1,6 +1,9 @@
 #include "Image.h"
 #include "Size.h"
 #include <exception>
+#include <fstream>
+#include <sstream>
+#include <iostream>
 
 using namespace std;
 
@@ -8,9 +11,9 @@ Image::Image()
 {
 	this->m_width = 0;
 	this->m_height = 0;
-	this->m_data = new unsigned int*[10];
-	for (int i = 0; i < 10; i++)
-		this->m_data[i] = new unsigned int[0];
+	this->m_data = new unsigned int*[1];
+	for (int i = 0; i < 1; i++)
+		this->m_data[i] = new unsigned int[1];
 	
 }
 
@@ -163,8 +166,69 @@ unsigned int* Image::row(int y)
 
 void Image::release()
 {
-	for (int i = m_height - 1; i >= 0; i--)
+	for (int i = 0; i < m_height; i++)
 		delete[] m_data[i];
+}
+
+bool Image::load(std::string imagePath)
+{
+	cout << "Loading image from: " << imagePath << endl;
+
+	ifstream infile(imagePath);
+	stringstream ss;
+	string inputLine = "";
+
+	// First line : version
+	getline(infile, inputLine);
+	if (inputLine.compare("P2") != 0) cerr << "Version error" << endl;
+	else cout << "Version : " << inputLine << endl;
+
+	// Second line : comment
+	getline(infile, inputLine);
+	cout << "Comment : " << inputLine << endl;
+
+	// Continue with a stringstream
+	ss << infile.rdbuf();
+	// Third line : size
+	ss >> this->m_width >> this->m_height;
+	cout << this->m_width << " columns and " << m_height << " rows" << endl;
+
+	// Fourth line : The maximum gray value
+	int maxVal;
+	ss >> maxVal;
+	cout << "The maximum gray value: " << maxVal << endl;
+
+
+	//MEMORY SHOULD BE ALLOCATED FOR THIS
+	// Following lines : data
+	for (int i = 0; i < this->m_height; i++)
+		for (int j = 0; j < this->m_width; j++) ss >> this->m_data[i][j];
+	cout << "Done loading! " << endl;
+
+	return true;
+}
+
+bool Image::save(std::string imagePath)
+{
+	cout << "Saving image to: " << imagePath << endl;
+
+	fstream fout;
+	fout.open(imagePath, ofstream::out, ofstream::trunc);
+
+	fout << "P2" << endl;
+	fout << "# Result image" << endl;
+	fout << this->m_width << " " << this->m_height << endl;
+	fout << 255 << endl;
+
+	for (int i = 0; i < this->m_height; i++) {
+		for (int j = 0; j < this->m_width; j++) {
+			fout << this->m_data[i][j] << " ";
+		}
+		fout << endl;
+	}
+	
+	cout << "Saved! " << endl;
+	return true;
 }
 
 std::ostream& operator<<(std::ostream& os, const Image& dt)
