@@ -113,18 +113,39 @@ Image Image::operator*(const Image& image)
 	return result;
 }
 
-bool Image::getROI(Image& roiImg, unsigned int x, unsigned int y, unsigned int width, unsigned int height)/////////INCOMPLETE
+bool Image::getROI(Image& roiImg, Rectangle roiRect)
 {
-	if (roiImg.size().getWidth() < width || roiImg.size().getHeight() < height)
+	unsigned int x = roiRect.getX(), y = roiRect.getY(), width = roiRect.getWidth(), height = roiRect.getHeight();
+	if (roiImg.m_width < x + width || roiImg.m_height < y + height)
 		return false;
 
 	Image toReturn(width, height);
 
+	for (int i = 0; i < height; i++) {
+		for (int j = 0; j < width; j++)
+			toReturn.m_data[i][j] = roiImg.m_data[y + i][x + j];
+	}
 
+	roiImg = toReturn;
 
+	return true;
+}
 
+bool Image::getROI(Image& roiImg, unsigned int x, unsigned int y, unsigned int width, unsigned int height)
+{
+	if (roiImg.m_width < x + width || roiImg.m_height < y + height)
+		return false;
 
-	return false;
+	Image toReturn(width, height);
+
+	for (int i = 0; i < height; i++) {
+		for (int j = 0; j < width; j++)
+			toReturn.m_data[i][j] = roiImg.m_data[y + i][x + j];
+	}
+
+	roiImg = toReturn;
+
+	return true;
 }
 
 bool Image::isEmpty() const
@@ -200,6 +221,8 @@ bool Image::load(std::string imagePath)
 
 
 	//MEMORY SHOULD BE ALLOCATED FOR THIS
+
+
 	// Following lines : data
 	for (int i = 0; i < this->m_height; i++)
 		for (int j = 0; j < this->m_width; j++) ss >> this->m_data[i][j];
