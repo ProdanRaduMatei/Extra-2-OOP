@@ -31,6 +31,8 @@ public:
 
 	unsigned int width() const;
 	unsigned int height() const;
+	unsigned int getPixelVal(int x, int y) const;
+	void setPixelVal(int x, int y, float val) const;
 
 	unsigned int& at(unsigned int x, unsigned int y);
 	unsigned int& at(Point pt);
@@ -41,6 +43,7 @@ public:
 
 	static Image zeros(unsigned int width, unsigned int height);
 	static Image ones(unsigned int width, unsigned int height);
+
 private:
 	unsigned int** m_data;
 	unsigned int m_width;

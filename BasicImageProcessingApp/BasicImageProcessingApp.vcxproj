@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="drawingModule.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="ImageProcessing.h" />
     <ClInclude Include="Point.h" />
@@ -146,6 +147,7 @@
     <ClInclude Include="Size.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="drawingModule.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="ImageProcessing.cpp" />
     <ClCompile Include="Main.cpp" />

@@ -1,2 +1,9 @@
-﻿  Main.cpp
+﻿  drawingModule.cpp
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(5,65): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(10,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(11,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(15,27): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(22,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(23,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(26,27): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
   BasicImageProcessingApp.vcxproj -> C:\Users\Andrei\source\repos\BasicImageProcessingApp\Debug\BasicImageProcessingApp.exe

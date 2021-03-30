@@ -28,8 +28,8 @@ Image::Image(unsigned int w, unsigned int h)
 
 Image::Image(const Image& other)
 {
-	if (this->m_height != other.m_height || this->m_width != other.m_width)
-		throw exception();
+	//if (this->m_height != other.m_height || this->m_width != other.m_width)
+		//throw exception();
 
 	this->m_height = other.m_height;
 	this->m_width = other.m_width;
@@ -170,6 +170,23 @@ unsigned int Image::height() const
 	return this->m_height;
 }
 
+unsigned int Image::getPixelVal(int x, int y) const
+{
+	return this->m_data[y][x];
+}
+
+void Image::setPixelVal(int x, int y, float val) const
+{
+	unsigned val2;
+	if (val < 0)
+		val2 = 0;
+	else if (val > 255)
+		val2 = 255;
+	else
+		val2 = unsigned int(val);
+	this->m_data[y][x] = val2;
+}
+
 unsigned int& Image::at(unsigned int x, unsigned int y)
 {
 	return this->m_data[x][y];
@@ -183,6 +200,26 @@ unsigned int& Image::at(Point pt)
 unsigned int* Image::row(int y)
 {
 	return m_data[y];
+}
+
+Image Image::zeros(unsigned int width, unsigned int height)
+{
+	Image toReturn(width, height);
+	for (int i = 0; i < height; i++)
+		for (int j = 0; i < width; j++)
+			toReturn.m_data[i][j] = 0;
+
+	return toReturn;
+}
+
+Image Image::ones(unsigned int width, unsigned int height)
+{
+	Image toReturn(width, height);
+	for (int i = 0; i < height; i++)
+		for (int j = 0; i < width; j++)
+			toReturn.m_data[i][j] = 1;
+
+	return toReturn;
 }
 
 void Image::release()

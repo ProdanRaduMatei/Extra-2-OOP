@@ -30,6 +30,9 @@
     <ClInclude Include="ImageProcessing.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="drawingModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Image.cpp">
@@ -48,6 +51,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ImageProcessing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="drawingModule.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
