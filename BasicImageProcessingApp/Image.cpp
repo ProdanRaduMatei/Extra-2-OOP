@@ -21,9 +21,9 @@ Image::Image(unsigned int w, unsigned int h)
 {
 	this->m_width = w;
 	this->m_height = h;
-	this->m_data = new unsigned int*[h];
-	for (int i = 0; i < h; i++)
-		this->m_data[i] = new unsigned int[w];
+	this->m_data = new unsigned int*[9999];
+	for (int i = 0; i < 9999; i++)
+		this->m_data[i] = new unsigned int[9999];
 }
 
 Image::Image(const Image& other)
@@ -47,10 +47,7 @@ Image::Image(const Image& other)
 
 Image::~Image()
 {
-	//cout << "DESTROY. ";
 	this->release();
-	delete[] this->m_data;
-	//cout << "DESTROY. COMPLETE";
 }
 
 Image& Image::operator=(const Image& other)
@@ -233,13 +230,11 @@ void Image::ones(unsigned int width, unsigned int height)
 	}
 }
 
-void Image::release()/////////////////
+void Image::release()
 {
-	//cout << "RELAEASE. ";
-	//cout << m_height;
-	for (int i = 0; i < m_height; i++)
+	for (int i = 0; i < 9999; i++)
 		delete[] m_data[i];
-	//cout << "RELAEASE COMPLETE. " << "*" << this->m_data[1][1] << "* " ;
+	delete[] m_data;
 }
 
 bool Image::load(std::string imagePath)
