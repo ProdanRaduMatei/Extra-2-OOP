@@ -28,3 +28,17 @@ public:
 private:
 	float tita;
 };
+
+class Convolution : public ImageProcessing {
+private:
+	unsigned int kernel[4][4];
+
+public:
+	void process(const Image& src, Image& dst) override;
+	void setKernelIdentity();
+	void setKernelBlur();
+	void setKernelGaussian();
+	void setKernelHorizontal();
+	void setKernelVertical();
+	int csp(const Image& src, unsigned int x, unsigned int y);
+};

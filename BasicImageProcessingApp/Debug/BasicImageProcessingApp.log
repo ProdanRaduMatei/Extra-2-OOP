@@ -1,23 +1,30 @@
-﻿  Main.cpp
-  drawingModule.cpp
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(7,65): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(12,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(13,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(17,27): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(24,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(25,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(27,59): warning C4018: '<=': signed/unsigned mismatch
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(27,69): warning C4018: '<=': signed/unsigned mismatch
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(27,95): warning C4018: '<=': signed/unsigned mismatch
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(27,105): warning C4018: '<=': signed/unsigned mismatch
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(27,133): warning C4018: '<=': signed/unsigned mismatch
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(27,143): warning C4018: '<=': signed/unsigned mismatch
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(27,169): warning C4018: '<=': signed/unsigned mismatch
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(27,179): warning C4018: '<=': signed/unsigned mismatch
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(28,27): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(41,23): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(45,25): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(49,25): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\drawingModule.cpp(53,25): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-  Generating Code...
+﻿  Image.cpp
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(25,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(40,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(43,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(44,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(66,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(69,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(70,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(83,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(84,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(97,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(98,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(111,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(112,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(126,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(127,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(143,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(144,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(219,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(220,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(229,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(230,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(240,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(278,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(279,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(297,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(298,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(310,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\Image.cpp(311,21): warning C4018: '<': signed/unsigned mismatch
   BasicImageProcessingApp.vcxproj -> C:\Users\Andrei\source\repos\BasicImageProcessingApp\Debug\BasicImageProcessingApp.exe

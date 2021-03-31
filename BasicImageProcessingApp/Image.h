@@ -32,7 +32,10 @@ public:
 	unsigned int width() const;
 	unsigned int height() const;
 	unsigned int getPixelVal(int x, int y) const;
+
 	void setPixelVal(int x, int y, float val) const;
+	void setHeight(unsigned int newHeight);
+	void setWidth(unsigned int newWidth);
 
 	unsigned int& at(unsigned int x, unsigned int y);
 	unsigned int& at(Point pt);
@@ -41,8 +44,8 @@ public:
 
 	friend std::ostream& operator<<(std::ostream& os, const Image& dt);
 
-	static Image zeros(unsigned int width, unsigned int height);
-	static Image ones(unsigned int width, unsigned int height);
+	void zeros(unsigned int width, unsigned int height);
+	void ones(unsigned int width, unsigned int height);
 
 private:
 	unsigned int** m_data;

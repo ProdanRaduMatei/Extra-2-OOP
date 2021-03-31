@@ -13,7 +13,7 @@ void drawCircle(Image& img, Point center, int radius, unsigned int color)
 		for (int j = 0; j < img.width(); j++) {
 			Point P(j,i);
 			float d = distance(center, P);//compute distance
-			if(radius-1 <= d && d <= radius+1)//allow a little error -> if d is from the interval [radius-1,radius+1]
+			if(radius-1 <= d && d <= radius+1)//if d is from the interval [radius-1,radius+1]
 				img.setPixelVal(j, i, color);
 		}
 	}

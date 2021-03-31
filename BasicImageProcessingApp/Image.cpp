@@ -11,9 +11,9 @@ Image::Image()
 {
 	this->m_width = 0;
 	this->m_height = 0;
-	this->m_data = new unsigned int*[1];
-	for (int i = 0; i < 1; i++)
-		this->m_data[i] = new unsigned int[1];
+	this->m_data = new unsigned int*[9999];
+	for (int i = 0; i < 9999; i++)
+		this->m_data[i] = new unsigned int[9999];
 	
 }
 
@@ -47,8 +47,10 @@ Image::Image(const Image& other)
 
 Image::~Image()
 {
+	//cout << "DESTROY. ";
 	this->release();
-	delete[] m_data;
+	delete[] this->m_data;
+	//cout << "DESTROY. COMPLETE";
 }
 
 Image& Image::operator=(const Image& other)
@@ -187,6 +189,16 @@ void Image::setPixelVal(int x, int y, float val) const
 	this->m_data[y][x] = val2;
 }
 
+void Image::setHeight(unsigned int newHeight)
+{
+	this->m_height = newHeight;
+}
+
+void Image::setWidth(unsigned int newWidth)
+{
+	this->m_width = newWidth;
+}
+
 unsigned int& Image::at(unsigned int x, unsigned int y)
 {
 	return this->m_data[x][y];
@@ -202,30 +214,32 @@ unsigned int* Image::row(int y)
 	return m_data[y];
 }
 
-Image Image::zeros(unsigned int width, unsigned int height)
+void Image::zeros(unsigned int width, unsigned int height)
 {
-	Image toReturn(width, height);
-	for (int i = 0; i < height; i++)
-		for (int j = 0; i < width; j++)
-			toReturn.m_data[i][j] = 0;
+	for (int i = 0; i < height; i++) {
+		for (int j = 0; i < width; j++) {
+			this->m_data[i][j] = 0;
+		}
+	}
 
-	return toReturn;
 }
 
-Image Image::ones(unsigned int width, unsigned int height)
+void Image::ones(unsigned int width, unsigned int height)
 {
-	Image toReturn(width, height);
-	for (int i = 0; i < height; i++)
-		for (int j = 0; i < width; j++)
-			toReturn.m_data[i][j] = 1;
-
-	return toReturn;
+	for (int i = 0; i < height; i++) {
+		for (int j = 0; i < width; j++) {
+			this->m_data[i][j] = 1;
+		}
+	}
 }
 
-void Image::release()
+void Image::release()/////////////////
 {
+	//cout << "RELAEASE. ";
+	//cout << m_height;
 	for (int i = 0; i < m_height; i++)
 		delete[] m_data[i];
+	//cout << "RELAEASE COMPLETE. " << "*" << this->m_data[1][1] << "* " ;
 }
 
 bool Image::load(std::string imagePath)
