@@ -1,7 +1,10 @@
 #pragma once
 #include "Point.h"
 
-class Rectangle
+#include "namespaceImgApp.h"
+using namespace namespaceImgApp;
+
+class namespaceImgApp::Rectangle
 {
 public:
 	Rectangle();

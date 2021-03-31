@@ -4,7 +4,10 @@
 #include "Rectangle.h"
 #include "Point.h"
 
-class Image
+#include "namespaceImgApp.h"
+using namespace namespaceImgApp;
+
+class namespaceImgApp::Image
 {
 public:
 	Image();//default constructor

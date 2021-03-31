@@ -3,6 +3,9 @@
 #include <iostream>
 #include "Rectangle.h"
 
+#include "namespaceImgApp.h"
+using namespace namespaceImgApp;
+
 float distance(Point P1, Point P2) {
 	return sqrtf((P2.getX() - P1.getX()) * (P2.getX() - P1.getX()) + (P2.getY() - P1.getY()) * (P2.getY() - P1.getY()));
 }

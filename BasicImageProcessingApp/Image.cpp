@@ -6,6 +6,7 @@
 #include <iostream>
 
 using namespace std;
+using namespace namespaceImgApp;
 
 Image::Image()
 {
@@ -35,7 +36,6 @@ Image::Image(const Image& other)
 	this->m_width = other.m_width;
 
 	this->release();
-	delete[] this->m_data;
 	this->m_data = new unsigned int* [this->m_height];
 	for (int i = 0; i < this->m_height; i++)
 		this->m_data[i] = new unsigned int[this->m_width];
@@ -58,7 +58,6 @@ Image& Image::operator=(const Image& other)
 	this->m_width = other.m_width;
 
 	this->release();
-	delete[] this->m_data;
 	this->m_data = new unsigned int* [this->m_height];
 	for (int i = 0; i < this->m_height; i++)
 		this->m_data[i] = new unsigned int[this->m_width];
@@ -302,9 +301,9 @@ bool Image::save(std::string imagePath)
 
 std::ostream& operator<<(std::ostream& os, const Image& dt)
 {
-	for (int i = 0; i < dt.m_height; i++) {
-		for (int j = 0; j < dt.m_width; j++)
-			os << dt.m_data[i][j] << " ";
+	for (int i = 0; i < dt.height(); i++) {
+		for (int j = 0; j < dt.width(); j++)
+			os << dt.getPixelVal(j,i) << " ";
 		os << endl;
 	}
 	return os;

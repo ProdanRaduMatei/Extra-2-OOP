@@ -14,28 +14,28 @@ Size::Size(unsigned int w, unsigned int h)
 
 bool operator==(const Size& S1, const Size& S2)
 {
-	if (S1.m_height == S2.m_height && S1.m_width == S2.m_width)
+	if (S1.getHeight() == S2.getHeight() && S1.getWidth() == S2.getWidth())
 		return true;
 	return false;
 }
 
 bool operator!=(const Size& S1, const Size& S2)
 {
-	if (S1.m_height != S2.m_height || S1.m_width != S2.m_width)
+	if (S1.getHeight() != S2.getHeight() || S1.getWidth() != S2.getWidth())
 		return true;
 	return false;
 }
 
 bool operator>(const Size& S1, const Size& S2)
 {
-	if (S1.m_height >= S2.m_height && S1.m_width >= S2.m_width)
+	if (S1.getHeight() >= S2.getHeight() && S1.getWidth() >= S2.getWidth())
 		return true;
 	return false;
 }
 
-bool operator<(const Size& S1, const Size& S2)
+bool namespaceImgApp::operator<(const Size& S1, const Size& S2)
 {
-	if (S1.m_height < S2.m_height && S1.m_width < S2.m_width)
+	if (S1.getHeight() < S2.getHeight() && S1.getWidth() < S2.getWidth())
 		return true;
 	return false;
 }

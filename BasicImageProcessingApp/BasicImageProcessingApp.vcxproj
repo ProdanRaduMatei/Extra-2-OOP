@@ -142,6 +142,7 @@
     <ClInclude Include="drawingModule.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="ImageProcessing.h" />
+    <ClInclude Include="namespaceImgApp.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Size.h" />

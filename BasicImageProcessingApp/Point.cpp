@@ -14,12 +14,15 @@ Point::Point(unsigned int x, unsigned int y)
 
 std::ostream& operator<<(std::ostream& os, const Point& P)
 {
-	os << "(" << P.x << "," << P.y << ")";
+	os << "(" << P.getX() << "," << P.getY() << ")";
 	return os;
 }
 
 std::istream& operator>>(std::istream& is, Point& P)
 {
-	is >> P.x >> P.y;
+	unsigned int x, y;
+	is >> x >> y;
+	P.setX(x);
+	P.setY(y);
 	return is;
 }

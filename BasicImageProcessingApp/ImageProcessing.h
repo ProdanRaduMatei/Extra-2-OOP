@@ -1,13 +1,15 @@
 #pragma once
 #include "Image.h"
 
-class ImageProcessing
+using namespace namespaceImgApp;
+
+class namespaceImgApp::ImageProcessing
 {
 private:
 	virtual void process(const Image& src, Image& dst);
 };
 
-class Adjustment : public ImageProcessing {
+class Adjustment : public namespaceImgApp::ImageProcessing {
 public:
 	Adjustment();
 	void setContrast(float c);
@@ -19,7 +21,7 @@ private:
 	float contrast;
 };
 
-class Gamma : public ImageProcessing {
+class Gamma : public namespaceImgApp::ImageProcessing {
 public:
 	Gamma();
 	void setTita(float t);
@@ -29,7 +31,7 @@ private:
 	float tita;
 };
 
-class Convolution : public ImageProcessing {
+class Convolution : public namespaceImgApp::ImageProcessing {
 private:
 	unsigned int kernel[4][4];
 
