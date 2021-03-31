@@ -9,4 +9,4 @@ void drawLine(Image& img, Point p1, Point p2, unsigned int color);
 
 void drawRectangle(Image& img, Rectangle r, unsigned int color);
 
-void drawRectangle(Image& img, Point tl, Point br, unsigned int color);
+void drawRectangle(Image& img, Point p1, Point p2, unsigned int color);
