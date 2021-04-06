@@ -1,2 +1,24 @@
-﻿  Main.cpp
+﻿  ImageProcessing.cpp
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(30,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(31,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(47,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(48,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(49,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(148,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(149,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(150,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(160,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(161,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(162,41): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(172,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(173,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(174,54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(184,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(185,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(186,52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(197,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(198,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Andrei\source\repos\BasicImageProcessingApp\BasicImageProcessingApp\ImageProcessing.cpp(199,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Main.cpp
+  Generating Code...
   BasicImageProcessingApp.vcxproj -> C:\Users\Andrei\source\repos\BasicImageProcessingApp\Debug\BasicImageProcessingApp.exe

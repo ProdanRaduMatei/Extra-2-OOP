@@ -33,14 +33,27 @@ private:
 
 class Convolution : public namespaceImgApp::ImageProcessing {
 private:
-	unsigned int kernel[4][4];
+	unsigned int kernel[3][3];
+	unsigned int operation = 0;
 
 public:
+
+	void setOperation(unsigned int x);
+
+	int rangeSobelConverter(int x);
+
 	void process(const Image& src, Image& dst) override;
-	void setKernelIdentity();
+
 	void setKernelBlur();
 	void setKernelGaussian();
-	void setKernelHorizontal();
-	void setKernelVertical();
-	int csp(const Image& src, unsigned int x, unsigned int y);
+	void setKernelHorizontalSobel();
+	void setKernelVerticalSobel();
+
+	int conSumIdentity(const Image& src, unsigned int x, unsigned int y);
+
+	int conSumBlur(const Image& src, unsigned int x, unsigned int y);
+	int conSumGaussian(const Image& src, unsigned int x, unsigned int y);
+
+	int conSumHorizontalSobel(const Image& src, unsigned int x, unsigned int y);
+	int conSumVerticalSobel(const Image& src, unsigned int x, unsigned int y);
 };

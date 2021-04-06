@@ -12,9 +12,11 @@ Image::Image()
 {
 	this->m_width = 0;
 	this->m_height = 0;
-	this->m_data = new unsigned int*[9999];
+	this->m_data = nullptr;
+
+	/*this->m_data = new unsigned int*[9999];
 	for (int i = 0; i < 9999; i++)
-		this->m_data[i] = new unsigned int[9999];
+		this->m_data[i] = new unsigned int[9999];*/
 	
 }
 
@@ -22,9 +24,9 @@ Image::Image(unsigned int w, unsigned int h)
 {
 	this->m_width = w;
 	this->m_height = h;
-	this->m_data = new unsigned int*[9999];
-	for (int i = 0; i < 9999; i++)
-		this->m_data[i] = new unsigned int[9999];
+	this->m_data = new unsigned int*[h];
+	for (int i = 0; i < this->m_height; i++)
+		this->m_data[i] = new unsigned int[w];
 }
 
 Image::Image(const Image& other)
@@ -35,7 +37,6 @@ Image::Image(const Image& other)
 	this->m_height = other.m_height;
 	this->m_width = other.m_width;
 
-	this->release();
 	this->m_data = new unsigned int* [this->m_height];
 	for (int i = 0; i < this->m_height; i++)
 		this->m_data[i] = new unsigned int[this->m_width];
@@ -231,13 +232,15 @@ void Image::ones(unsigned int width, unsigned int height)
 
 void Image::release()
 {
-	for (int i = 0; i < 9999; i++)
+	for (int i = 0; i < this->m_height; i++)
 		delete[] m_data[i];
 	delete[] m_data;
 }
 
 bool Image::load(std::string imagePath)
 {
+	this->release();
+
 	cout << "Loading image from: " << imagePath << endl;
 
 	ifstream infile(imagePath);
@@ -265,7 +268,13 @@ bool Image::load(std::string imagePath)
 	cout << "The maximum gray value: " << maxVal << endl;
 
 
-	//MEMORY SHOULD BE ALLOCATED FOR THIS
+
+	// Allocate memory
+	this->m_data = new unsigned int* [this->m_height];
+	for (int i = 0; i < this->m_height; i++)
+		this->m_data[i] = new unsigned int[this->m_width];
+
+
 
 
 	// Following lines : data
